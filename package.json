@@ -40,9 +40,6 @@
   "bugs": {
     "url": "https://github.com/grpc/grpc-node/issues"
   },
-  "bundleDependencies": [
-    "node-pre-gyp"
-  ],
   "contributors": [
     {
       "name": "Michael Lumish",
@@ -52,7 +49,6 @@
   "dependencies": {
     "lodash": "^4.15.0",
     "nan": "^2.10.0",
-    "node-pre-gyp": "0.7.0",
     "protobufjs": "^5.0.0"
   },
   "description": "gRPC Library for Node",
@@ -82,8 +78,7 @@
     "deps/grpc/third_party/boringssl/crypto/**/*.{c,cc,h}",
     "deps/grpc/third_party/boringssl/include/**/*.{c,cc,h}",
     "deps/grpc/third_party/boringssl/ssl/**/*.{c,cc,h}",
-    "deps/grpc/third_party/abseil-cpp/absl/**/*.{h,hh}",
-    "binding.gyp"
+    "deps/grpc/third_party/abseil-cpp/absl/**/*.{h,hh}"
   ],
   "homepage": "https://grpc.io/",
   "jshintConfig": {
@@ -114,10 +109,9 @@
     "url": "git+https://github.com/grpc/grpc-node.git"
   },
   "scripts": {
-    "build": "node-pre-gyp build",
     "coverage": "istanbul cover ./node_modules/.bin/_mocha test",
     "electron-build": "node-pre-gyp configure build --runtime=electron --disturl=https://atom.io/download/atom-shell",
-    "install": "node-pre-gyp install --fallback-to-build --library=static_library"
+    "install": "install --fallback-to-build --library=static_library"
   },
   "typings": "index.d.ts",
   "version": "1.10.1"
