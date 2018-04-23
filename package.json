@@ -1,53 +1,124 @@
 {
-  "name": "grpc-js-repository",
-  "version": "0.1.0",
-  "description": "Dummy package for the grpc-node repository",
-  "private": true,
-  "keywords": [],
+  "_args": [
+    [
+      "grpc@1.10.1",
+      "C:\\prism\\rpi-client\\server"
+    ]
+  ],
+  "_from": "grpc@1.10.1",
+  "_id": "grpc@1.10.1",
+  "_inBundle": false,
+  "_integrity": "sha512-xmhA11h2XhqpSVzDAmoQAYdNQ+swILXpKOiRpAEQ2kX55ioxVADc6v7SkS4zQBxm4klhQHgGqpGKvoL6LGx4VQ==",
+  "_location": "/grpc",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "grpc@1.10.1",
+    "name": "grpc",
+    "escapedName": "grpc",
+    "rawSpec": "1.10.1",
+    "saveSpec": null,
+    "fetchSpec": "1.10.1"
+  },
+  "_requiredBy": [
+    "/@firebase/firestore"
+  ],
+  "_resolved": "https://registry.npmjs.org/grpc/-/grpc-1.10.1.tgz",
+  "_spec": "1.10.1",
+  "_where": "C:\\prism\\rpi-client\\server",
   "author": {
     "name": "Google Inc."
   },
-  "license": "Apache-2.0",
-  "devDependencies": {
-    "@types/execa": "^0.8.0",
-    "@types/gulp": "^4.0.5",
-    "@types/gulp-help": "0.0.34",
-    "@types/gulp-mocha": "0.0.31",
-    "@types/ncp": "^2.0.1",
-    "@types/node": "^8.0.32",
-    "@types/pify": "^3.0.0",
-    "del": "^3.0.0",
-    "execa": "^0.8.0",
-    "gulp": "^3.9.1",
-    "gulp-help": "^1.6.1",
-    "gulp-jsdoc3": "^1.0.1",
-    "gulp-jshint": "^2.0.4",
-    "gulp-mocha": "^4.3.1",
-    "gulp-sourcemaps": "^2.6.1",
-    "gulp-tslint": "^8.1.1",
-    "gulp-typescript": "^3.2.2",
-    "gulp-util": "^3.0.8",
-    "jsdoc": "^3.3.2",
-    "jshint": "^2.9.5",
-    "make-dir": "^1.1.0",
-    "merge2": "^1.1.0",
-    "mocha": "^3.5.3",
-    "mocha-jenkins-reporter": "^0.3.9",
-    "ncp": "^2.0.0",
-    "pify": "^3.0.0",
-    "through2": "^2.0.3",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.5.0",
-    "typescript": "~2.7.0",
-    "xml2js": "^0.4.19"
+  "binary": {
+    "module_name": "grpc_node",
+    "module_path": "src/node/extension_binary/{node_abi}-{platform}-{arch}-{libc}",
+    "host": "https://storage.googleapis.com/",
+    "remote_path": "grpc-precompiled-binaries/node/{name}/v{version}",
+    "package_name": "{node_abi}-{platform}-{arch}-{libc}.tar.gz"
   },
+  "bugs": {
+    "url": "https://github.com/grpc/grpc-node/issues"
+  },
+  "bundleDependencies": [
+    "node-pre-gyp"
+  ],
   "contributors": [
     {
-      "name": "Google Inc."
+      "name": "Michael Lumish",
+      "email": "mlumish@google.com"
     }
   ],
   "dependencies": {
-    "run-sequence": "^2.2.0",
-    "symlink": "^2.1.0"
-  }
+    "lodash": "^4.15.0",
+    "nan": "^2.10.0",
+    "node-pre-gyp": "0.7.0",
+    "protobufjs": "^5.0.0"
+  },
+  "description": "gRPC Library for Node",
+  "devDependencies": {
+    "electron-mocha": "^3.1.1",
+    "istanbul": "^0.4.4"
+  },
+  "directories": {
+    "lib": "src"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "deps/grpc/etc/",
+    "index.js",
+    "index.d.ts",
+    "src/*.js",
+    "ext/*.{cc,h}",
+    "deps/grpc/include/grpc/**/*.h",
+    "deps/grpc/src/core/**/*.{c,cc,h}",
+    "deps/grpc/src/boringssl/*.{c,cc,h}",
+    "deps/grpc/third_party/nanopb/*.{c,cc,h}",
+    "deps/grpc/third_party/zlib/**/*.{c,cc,h}",
+    "deps/grpc/third_party/boringssl/crypto/**/*.{c,cc,h}",
+    "deps/grpc/third_party/boringssl/include/**/*.{c,cc,h}",
+    "deps/grpc/third_party/boringssl/ssl/**/*.{c,cc,h}",
+    "deps/grpc/third_party/abseil-cpp/absl/**/*.{h,hh}",
+    "binding.gyp"
+  ],
+  "homepage": "https://grpc.io/",
+  "jshintConfig": {
+    "bitwise": true,
+    "curly": true,
+    "eqeqeq": true,
+    "esnext": true,
+    "freeze": true,
+    "immed": true,
+    "indent": 2,
+    "latedef": "nofunc",
+    "maxlen": 80,
+    "mocha": true,
+    "newcap": true,
+    "node": true,
+    "noarg": true,
+    "quotmark": "single",
+    "strict": true,
+    "trailing": true,
+    "undef": true,
+    "unused": "vars"
+  },
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "name": "grpc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grpc/grpc-node.git"
+  },
+  "scripts": {
+    "build": "node-pre-gyp build",
+    "coverage": "istanbul cover ./node_modules/.bin/_mocha test",
+    "electron-build": "node-pre-gyp configure build --runtime=electron --disturl=https://atom.io/download/atom-shell",
+    "install": "node-pre-gyp install --fallback-to-build --library=static_library"
+  },
+  "typings": "index.d.ts",
+  "version": "1.10.1"
 }
